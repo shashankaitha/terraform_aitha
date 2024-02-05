@@ -2,6 +2,9 @@ variable "aws_region" { type = string }
 # variable "amis" { type = map(any) }
 variable "vpc_cidr" { type = string }
 variable "vpc_name" { type = string }
+variable "vpc_secondary_cidr" {
+  type = string
+}
 # variable "key_name" { type = string }
 variable "public_subnet_cidrs" { type = list(any) }
 variable "private_subnet_cidrs" { type = list(any) }
