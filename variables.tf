@@ -8,3 +8,4 @@ variable "public_subnet_cidrs" { type = list(any) }
 variable "private_subnet_cidrs" { type = list(any) }
 variable "azs" { type = list(any) }
 variable "projid" { type = string }
+variable "tgwsubnet_cidrs" { type = list(any) }

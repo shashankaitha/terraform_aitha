@@ -3,5 +3,6 @@
 locals {
   new_public_subnet_cidrs  = distinct(var.public_subnet_cidrs)
   new_private_subnet_cidrs = distinct(var.private_subnet_cidrs)
+  new_tgwsubnet_cidrs      = distinct(var.tgwsubnet_cidrs)
   # new_environment          = lower(var.environment)
 }

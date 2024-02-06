@@ -8,5 +8,6 @@ module "vpc" {
   private_subnet_cidrs = var.private_subnet_cidrs
   azs                  = var.azs
   projid               = var.projid
+  tgwsubnet_cidrs      = var.tgwsubnet_cidrs
 
 }

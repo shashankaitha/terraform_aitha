@@ -1,6 +1,11 @@
 resource "aws_route_table" "terraform-public" {
   vpc_id = aws_vpc.default.id
 
+  tags = {
+    Name              = "${var.vpc_name}-PUBLIC-RT"
+    Terraform-Managed = "Yes"
+  }
+
 }
 
 
