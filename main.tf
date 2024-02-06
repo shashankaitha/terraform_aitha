@@ -1,16 +1,12 @@
 module "vpc" {
-  source             = "./vpc"
-  aws_region         = "us-east-1"
-  vpc_cidr           = "10.37.0.0/16"
-  vpc_name           = "Multiple_CIDR"
-  projid             = "kelly"
-  vpc_secondary_cidr = "198.18.0.0/16"
-  # key_name             = "Laptopkey"
-  public_subnet_cidrs = ["10.37.1.0/24", "10.37.2.0/24"]
-  # public_subnet_cidrs = ["10.37.1.0/24", "10.37.2.0/24", "10.37.3.0/24", "10.37.4.0/24", "10.37.5.0/24", "10.37.6.0/24"]#List
-  # private_subnet_cidrs = ["10.37.10.0/24", "10.37.20.0/24", "10.37.30.0/24", "10.37.10.0/24", "10.37.20.0/24", "10.37.30.0/24"]
-  private_subnet_cidrs = ["10.37.10.0/24", "10.37.20.0/24"]                       #List
-  azs                  = ["us-east-1a", "us-east-1b", "us-east-1c", "us-east-1d"] #List
-  # environment          = "production"
+  source               = "./vpc"
+  aws_region           = var.aws_region
+  vpc_cidr             = var.vpc_cidr
+  vpc_name             = var.vpc_name
+  vpc_secondary_cidr   = var.vpc_secondary_cidr
+  public_subnet_cidrs  = var.public_subnet_cidrs
+  private_subnet_cidrs = var.private_subnet_cidrs
+  azs                  = var.azs
+  projid               = var.projid
 
 }
