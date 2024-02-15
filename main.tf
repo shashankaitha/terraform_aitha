@@ -9,5 +9,6 @@ module "vpc" {
   azs                  = var.azs
   projid               = var.projid
   tgwsubnet_cidrs      = var.tgwsubnet_cidrs
+  transit_gateway_id   = var.transit_gateway_id
 
 }
