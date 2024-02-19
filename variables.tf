@@ -12,3 +12,9 @@ variable "tgwsubnet_cidrs" { type = list(any) }
 variable "transit_gateway_id" {
   type = string
 }
+variable "routes" {
+  description = "Map of CIDR blocks to transit gateway ID"
+  type        = list(string)
+  default     = ["10.0.0.0/8", "23.228.0.0/19", "66.111.130.0/24", "66.111.154.0/23"]
+}
+

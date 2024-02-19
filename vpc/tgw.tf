@@ -1,7 +1,7 @@
 resource "aws_ec2_transit_gateway_vpc_attachment" "tgw_attachment" {
   subnet_ids         = var.tgwsubnet_cidrs
   vpc_id             = aws_vpc.default.id
-  transit_gateway_id  = var.transit_gateway_id
+  transit_gateway_id = var.transit_gateway_id
 
 }
 
@@ -32,7 +32,7 @@ resource "aws_route_table_association" "terraform-tgw" {
 # }
 
 resource "aws_vpc_endpoint" "s3_gateway_endpoint" {
-  vpc_id       = aws_vpc.default
+  vpc_id       = aws_vpc.default.id
   service_name = "com.amazonaws.us-east-1.s3"
 }
 
