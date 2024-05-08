@@ -36,9 +36,9 @@ resource "aws_vpc_endpoint" "s3_gateway_endpoint" {
   service_name = "com.amazonaws.us-east-1.s3"
 }
 
-resource "aws_route" "terraform-tgw-routes" {
-  route_table_id             = aws_route_table.terraform-tgw.id
-  vpc_endpoint_id            = aws_vpc_endpoint.s3_gateway_endpoint.id
-  destination_prefix_list_id = aws_vpc_endpoint.s3_gateway_endpoint.prefix_list_id
+# resource "aws_route" "terraform-tgw-routes" {
+#   route_table_id             = aws_route_table.terraform-tgw.id
+#   vpc_endpoint_id            = aws_vpc_endpoint.s3_gateway_endpoint.id
+#   destination_prefix_list_id = aws_vpc_endpoint.s3_gateway_endpoint.prefix_list_id
 
-}
+# }

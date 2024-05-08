@@ -15,11 +15,11 @@ resource "aws_route" "igw-route" {
   gateway_id             = aws_internet_gateway.default.id
 }
 
-resource "aws_route" "s3endpoint-route" {
-  destination_prefix_list_id = aws_vpc_endpoint.s3_gateway_endpoint.prefix_list_id
-  vpc_endpoint_id            = aws_vpc_endpoint.s3_gateway_endpoint.id
-  route_table_id             = aws_route_table.terraform-public.id
-}
+# resource "aws_route" "s3endpoint-route" {
+#   destination_prefix_list_id = aws_vpc_endpoint.s3_gateway_endpoint.prefix_list_id
+#   vpc_endpoint_id            = aws_vpc_endpoint.s3_gateway_endpoint.id
+#   route_table_id             = aws_route_table.terraform-public.id
+# }
 
 resource "aws_route" "terraform-public" {
   for_each = toset(var.routes)
